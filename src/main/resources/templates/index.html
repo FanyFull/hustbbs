@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="zh-CN" xmlns:th="https://www.thymeleaf.org">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <!--<link href="../static/css/bootstrap.css" rel="stylesheet" type="text/css">-->
+  <link th:href="@{css/bootstrap.css}" rel="stylesheet" type="text/css">
+
+  <title>首页</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">HUST-BBS</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-lg-4 me-auto mb-2 mb-lg-0 align-items-center">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">首页</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">精彩话题</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">排行榜</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">全部分类</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">精华</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">特别服务</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">帮助</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown">
+              登录/注册
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">登录</a></li>
+              <li><a class="dropdown-item" href="#">注册</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="搜索帖子" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <section class="p-5 bg-dark text-light text-center">
+    <div class="container">
+      <div class="d-flex">
+        <!-- display flex -->
+        <div>
+          <h1>
+            欢迎来到 HUST BBS
+          </h1>
+          <p class="my-4">
+            <!-- margin-top and margin-bottom -->
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, dolorem, ratione? Ad aliquid deleniti
+            dignissimos dolor, dolore dolorum ducimus inventore, itaque laborum necessitatibus nemo quam qui recusandae
+            tempore vel voluptatem.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti esse facilis ipsa omnis tempora. Ad
+            consectetur corporis debitis, eos et in, inventore iste molestias qui rem ut vero? Pariatur, quas.
+          </p>
+          <button class="btn btn-primary btn-lg">
+            开始冲浪之旅
+          </button>
+        </div>
+        <img th:src="@{images/showcase.svg}" alt="showcase" class="w-50 d-none d-md-block">
+      </div>
+    </div>
+  </section>
+
+  <div class="p-3">
+    <div class="container">
+      <div class="row">
+        <div class="row g-3 col-md-9">
+          <div class="col-md-12">
+            <div class="card bg-dark text-light">
+              <div class="card-body text-center">
+                <div class="card-title">大西北之行</div>
+                <div class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid in minus modi, neque nobis officiis
+                  sequi
+                  ut. Assumenda, atque, consectetur esse ipsa labore mollitia nesciunt quaerat quos repudiandae sapiente
+                  sequi.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div class="card bg-dark text-light">
+              <div class="card-body text-center">
+                <div class="card-title">只想陪你们更多点</div>
+                <div class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid in minus modi, neque nobis officiis
+                  sequi
+                  ut. Assumenda, atque, consectetur esse ipsa labore mollitia nesciunt quaerat quos repudiandae sapiente
+                  sequi.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div class="card bg-dark text-light">
+              <div class="card-body text-center">
+                <div class="card-title">相思红豆殷如血</div>
+                <div class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid in minus modi, neque nobis officiis
+                  sequi
+                  ut. Assumenda, atque, consectetur esse ipsa labore mollitia nesciunt quaerat quos repudiandae sapiente
+                  sequi.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div class="card bg-dark text-light">
+              <div class="card-body text-center">
+                <div class="card-title">一点感慨</div>
+                <div class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid in minus modi, neque nobis officiis
+                  sequi
+                  ut. Assumenda, atque, consectetur esse ipsa labore mollitia nesciunt quaerat quos repudiandae sapiente
+                  sequi.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div class="card bg-dark text-light">
+              <div class="card-body text-center">
+                <div class="card-title">跳泥坑的小朋友了解一下</div>
+                <div class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid in minus modi, neque nobis officiis
+                  sequi
+                  ut. Assumenda, atque, consectetur esse ipsa labore mollitia nesciunt quaerat quos repudiandae sapiente
+                  sequi.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div class="card bg-dark text-light">
+              <div class="card-body text-center">
+                <div class="card-title">武汉（新洲）第四届问津之路徒步大赛</div>
+                <div class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid in minus modi, neque nobis officiis
+                  sequi
+                  ut. Assumenda, atque, consectetur esse ipsa labore mollitia nesciunt quaerat quos repudiandae sapiente
+                  sequi.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div class="card bg-dark text-light">
+              <div class="card-body text-center">
+                <div class="card-title">你是如此的难以忘记</div>
+                <div class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid in minus modi, neque nobis officiis
+                  sequi
+                  ut. Assumenda, atque, consectetur esse ipsa labore mollitia nesciunt quaerat quos repudiandae sapiente
+                  sequi.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div class="card bg-dark text-light">
+              <div class="card-body text-center">
+                <div class="card-title">秋意浓</div>
+                <div class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid in minus modi, neque nobis officiis
+                  sequi
+                  ut. Assumenda, atque, consectetur esse ipsa labore mollitia nesciunt quaerat quos repudiandae sapiente
+                  sequi.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div class="card bg-dark text-light">
+              <div class="card-body text-center">
+                <div class="card-title">20171105的东九蓝</div>
+                <div class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid in minus modi, neque nobis officiis
+                  sequi
+                  ut. Assumenda, atque, consectetur esse ipsa labore mollitia nesciunt quaerat quos repudiandae sapiente
+                  sequi.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div class="card bg-dark text-light">
+              <div class="card-body text-center">
+                <div class="card-title">十一的涠洲岛之旅</div>
+                <div class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid in minus modi, neque nobis officiis
+                  sequi
+                  ut. Assumenda, atque, consectetur esse ipsa labore mollitia nesciunt quaerat quos repudiandae sapiente
+                  sequi.
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row g-3 col-md-3">
+          <div class="card" style="width: 18rem; height: 30rem;">
+            <!--<img src="../static/images/bg.jpg" class="card-img-top" alt="...">-->
+            <img th:src="@{images/bg.jpg}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">精彩资讯</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- Bootstrap js -->
+  <!--<script src="../static/js/bootstrap.bundle.js"></script>-->
+  <script th:src="@{js/bootstrap.bundle.js}"></script>
+</body>
+
+</html>
