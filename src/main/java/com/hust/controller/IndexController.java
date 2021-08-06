@@ -3,17 +3,16 @@ package com.hust.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+/**
+ * 配置项目的根路径的页面
+ */
+
 @Controller
-public class TestControllers {
+public class IndexController {
 
-    @RequestMapping("/login")
-    public String login() {
+    @RequestMapping("/")
+    public String indexPage() {
         return "login";
-    }
-
-    @RequestMapping("/register")
-    public String register() {
-        return "register";
     }
 
 }

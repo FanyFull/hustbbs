@@ -1,4 +1,4 @@
-<html>
+<html lang="zh-CN" xmlns:th="https://www.thymeleaf.org">
 
 <head>
   <meta charset="UTF-8">
@@ -16,51 +16,53 @@
 </head>
 
 <body>
-<div id="container-login">
-  <div id="title">
-    <i class="material-icons lock">lock</i> Login
-  </div>
+  <div id="container-login">
+    <div id="title">
+      <i class="material-icons lock">lock</i> Login
+    </div>
 
-  <form>
-    <div class="input">
-      <div class="input-addon">
-        <i class="material-icons">face</i>
+    <form th:action="@{/login}" th:object="${user}" method="post">
+      <div class="input">
+        <div class="input-addon">
+          <i class="material-icons">face</i>
+        </div>
+        <!-- 这里 autocomplete 的值原来是 off，但是不奏效，故改为 nope，有效 -->
+        <input id="username" name="username" placeholder="Username / Email" type="text" required class="validate"
+               autocomplete="nope">
       </div>
-      <!-- 这里 autocomplete 的值原来是 off，但是不奏效，故改为 nope，有效 -->
-      <input id="username" placeholder="Username / Email" type="text" required class="validate" autocomplete="nope">
-    </div>
 
-    <div class="clearfix"></div>
+      <div class="clearfix"></div>
 
-    <div class="input">
-      <div class="input-addon">
-        <i class="material-icons">vpn_key</i>
+      <div class="input">
+        <div class="input-addon">
+          <i class="material-icons">vpn_key</i>
+        </div>
+        <input id="password" name="password" placeholder="Password" type="password" required class="validate"
+               autocomplete="off">
       </div>
-      <input id="password" placeholder="Password" type="password" required class="validate" autocomplete="off">
+
+      <div class="remember-me">
+        <input type="checkbox">
+        <span style="color: #757575">Remember Me</span>
+      </div>
+
+      <input type="submit" value="Log In"/>
+    </form>
+
+    <div class="forgot-password">
+      <a href="#">Forgot your password?</a>
+    </div>
+    <div class="privacy">
+      <a href="#">Privacy Policy</a>
     </div>
 
-    <div class="remember-me">
-      <input type="checkbox">
-      <span style="color: #757575">Remember Me</span>
+    <div class="register">
+      <span style="color: #657575">Don't have an account yet?</span>
+      <a th:href="@{/register}">
+        <button id="register-link">Register here</button>
+      </a>
     </div>
-
-    <input type="submit" value="Log In"/>
-  </form>
-
-  <div class="forgot-password">
-    <a href="#">Forgot your password?</a>
   </div>
-  <div class="privacy">
-    <a href="#">Privacy Policy</a>
-  </div>
-
-  <div class="register">
-    <span style="color: #657575">Don't have an account yet?</span>
-    <a th:href="@{/register}">
-      <button id="register-link">Register here</button>
-    </a>
-  </div>
-</div>
 </body>
 
 </html>
