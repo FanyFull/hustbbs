@@ -19,7 +19,7 @@ body {
     top: 20%;
     margin: auto;
     width: 340px;
-    height: 445px;
+    height: 450px;
     border-radius: 0.35em;
     box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.25);
     text-align: center;
@@ -177,10 +177,9 @@ input[type=submit] {
 }
 
 .register {
-    margin: auto;
     padding: 16px 0;
     text-align: center;
-    margin-top: 40px;
+    margin: 25px auto auto;
     width: 85%;
     border-top: 1px solid #C1C3C6;
 }

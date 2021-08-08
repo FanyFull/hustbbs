@@ -15,4 +15,17 @@
         select * from user_tb where username = #{uname} and password = #{pwd};
     </select>
 
+    <select id="queryUserByEmail" parameterType="String" resultType="User">
+        select * from user_tb where email = #{email};
+    </select>
+
+    <select id="queryUserByUname" parameterType="String" resultType="User">
+        select * from user_tb where username = #{uname};
+    </select>
+
+    <insert id="addOneUser">
+        insert into user_tb(`username`, `password`, email, create_time)
+        values(#{uname}, #{pwd}, #{email}, now());
+    </insert>
+
 </mapper>

@@ -30,4 +30,27 @@ public interface UserMapper {
      */
     User queryUserByUnameAndPwd(@Param("uname") String uname, @Param("pwd") String pwd);
 
+    /**
+     * 根据邮箱查询用户
+     * @param email
+     * @return
+     */
+    User queryUserByEmail(String email);
+
+    /**
+     * 根据用户名查询用户
+     * @param uname
+     * @return
+     */
+    User queryUserByUname(String uname);
+
+    /**
+     * 新增一个用户
+     * @param email
+     * @param uname
+     * @param pwd
+     * @return
+     */
+    int addOneUser(@Param("email") String email, @Param("uname") String uname, @Param("pwd") String pwd);
+
 }

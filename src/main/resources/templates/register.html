@@ -1,4 +1,4 @@
-<html>
+<html lang="zh-CN" xmlns:th="https://www.thymeleaf.org">
 
 <head>
   <meta charset="UTF-8">
@@ -16,56 +16,61 @@
 </head>
 
 <body>
-<div id="container-register">
-  <div id="title">
-    <i class="material-icons lock">lock</i> Register
-  </div>
+  <div id="container-register">
+    <div id="title">
+      <i class="material-icons lock">lock</i> Register
+    </div>
 
-  <form>
-    <div class="input">
-      <div class="input-addon">
-        <i class="material-icons">email</i>
+    <form th:action="@{/register}" th:object="${re_user}" method="post">
+      <div class="input">
+        <div class="input-addon">
+          <i class="material-icons">email</i>
+        </div>
+        <input id="email" name="email" placeholder="Email" type="email" required class="validate" autocomplete="off">
       </div>
-      <input id="email" placeholder="Email" type="email" required class="validate" autocomplete="off">
-    </div>
 
-    <div class="clearfix"></div>
+      <div class="clearfix"></div>
 
-    <div class="input">
-      <div class="input-addon">
-        <i class="material-icons">face</i>
+      <div class="input">
+        <div class="input-addon">
+          <i class="material-icons">face</i>
+        </div>
+        <input id="username" name="username" placeholder="Username" type="text" required class="validate"
+               autocomplete="off">
       </div>
-      <input id="username" placeholder="Username" type="text" required class="validate" autocomplete="off">
-    </div>
 
-    <div class="clearfix"></div>
+      <div class="clearfix"></div>
 
-    <div class="input">
-      <div class="input-addon">
-        <i class="material-icons">vpn_key</i>
+      <div class="input">
+        <div class="input-addon">
+          <i class="material-icons">vpn_key</i>
+        </div>
+        <input id="password" name="password" placeholder="Password" type="password" required class="validate"
+               autocomplete="off">
       </div>
-      <input id="password" placeholder="Password" type="password" required class="validate" autocomplete="off">
+
+      <!-- 注册失败时显示 -->
+      <span th:text="${re_msg}" style="color: red"></span>
+
+      <div class="remember-me">
+        <input type="checkbox">
+        <span style="color: #757575">I accept Terms of Service</span>
+      </div>
+
+      <input type="submit" value="Register"/>
+    </form>
+
+    <div class="privacy">
+      <a href="#">Privacy Policy</a>
     </div>
 
-    <div class="remember-me">
-      <input type="checkbox">
-      <span style="color: #757575">I accept Terms of Service</span>
+    <div class="register">
+      <span style="color: #657575">Do you already have an account?</span>
+      <a th:href="@{login}">
+        <button id="register-link">Log In here</button>
+      </a>
     </div>
-
-    <input type="submit" value="Register"/>
-  </form>
-
-  <div class="privacy">
-    <a href="#">Privacy Policy</a>
   </div>
-
-  <div class="register">
-    <span style="color: #657575">Do you already have an account?</span>
-    <a th:href="@{login}">
-      <button id="register-link">Log In here</button>
-    </a>
-  </div>
-</div>
 </body>
 
 </html>

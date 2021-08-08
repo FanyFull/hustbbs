@@ -3,7 +3,6 @@ package com.hust.service;
 import com.hust.dao.UserMapper;
 import com.hust.pojo.User;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -33,5 +32,20 @@ public class UserService implements UserMapper {
     @Override
     public User queryUserByUnameAndPwd(String uname, String pwd) {
         return userMapper.queryUserByUnameAndPwd(uname, pwd);
+    }
+
+    @Override
+    public User queryUserByEmail(String email) {
+        return userMapper.queryUserByEmail(email);
+    }
+
+    @Override
+    public User queryUserByUname(String uname) {
+        return userMapper.queryUserByUname(uname);
+    }
+
+    @Override
+    public int addOneUser(String email, String uname, String pwd) {
+        return userMapper.addOneUser(email, uname, pwd);
     }
 }
